@@ -1,2 +1,0 @@
-# sync
-SYNC YOUR MEMEK
