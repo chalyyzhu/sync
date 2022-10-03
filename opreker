@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+screen_name="sync"
+
+
+if [ ! $# -eq 0 ]; then
+    if [ $1 == "status" ]; then
+        if screen -list | grep "$screen_name"; then
+            echo "READING LOG... "
+            tail -Fn 0 /root/sync/screen.log
+        else
+            echo "NO SESSION RUNING... "
+            exit
+        fi
+        
+    
+    elif [ $1 == "start" ]; then
+      /etc/init.d/autostart-sync start
+      
+    elif [ $1 == "stop" ]; then
+      /etc/init.d/autostart-sync stop
+      
+    elif [ $1 == "restart" ]; then
+      /etc/init.d/autostart-sync restart
+
+    elif [ $1 == "update" ]; then
+      wget -O /var/log/install.sh "https://raw.githubusercontent.com/chalyyzhu/sync/main/install.sh"
+      chmod +x /var/log/install.sh
+      /var/log/install.sh
+
+    elif [ $1 == "screen" ]; then
+      screen -ls
+    
+    fi
+fi
+
