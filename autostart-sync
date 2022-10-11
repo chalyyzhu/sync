@@ -25,7 +25,7 @@ start_service() {
         rm $screen_file 
         echo "Delete log screen $screen_file.." 
     fi
-    screen -dmS $screen_name -L -Logfile $screen_file sync
+    screen -dmS $screen_name -L -Logfile $screen_file python3 /root/sync/sync.py
     echo  "AUTOSYNC service ruining...."
 }
 
