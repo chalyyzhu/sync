@@ -13,12 +13,14 @@ else
 fi
 
 opkg update
+opkg install python3 && opkg install python3-pip
+pip3 install requests
 
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/bug.txt" -O "${DIR}/bug.txt"
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/config.json" -O "${DIR}/config.json"
 
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/autostart-sync" -O /etc/init.d/autostart-sync
-wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/sync" -O /usr/bin/sync
+wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/sync.py" -O "${DIR}/config.json"
 
 chmod +x /usr/bin/sync
 chmod +x /etc/init.d/autostart-sync 
