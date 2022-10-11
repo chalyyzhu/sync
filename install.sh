@@ -12,8 +12,7 @@ else
    echo "Installing .. [+]"  
 fi
 
-opkg update
-opkg install python3 && opkg install python3-pip
+opkg update && opkg install python3 && opkg install python3-pip
 pip3 install requests
 
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/bug.txt" -O "${DIR}/bug.txt"
@@ -22,7 +21,6 @@ wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/config.json" -O "${D
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/autostart-sync" -O /etc/init.d/autostart-sync
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/sync.py" -O "${DIR}/sync.py"
 
-chmod +x /usr/bin/sync
 chmod +x /etc/init.d/autostart-sync 
 /etc/init.d/autostart-sync enable
 /etc/init.d/autostart-sync start
