@@ -20,7 +20,7 @@ wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/bug.txt" -O "${DIR}/
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/config.json" -O "${DIR}/config.json"
 
 wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/autostart-sync" -O /etc/init.d/autostart-sync
-wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/sync.py" -O "${DIR}/config.json"
+wget "https://raw.githubusercontent.com/chalyyzhu/sync/main/sync.py" -O "${DIR}/sync.py"
 
 chmod +x /usr/bin/sync
 chmod +x /etc/init.d/autostart-sync 
