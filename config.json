@@ -1,8 +1,0 @@
-{
-    "private_key": "XXXXXXXXXXXXXXX",
-    "mode_": "ws",
-    "file_public": ["sync.yaml"],
-    "file_private": ["zhoe.yaml"],
-    "time_loop": 10
-    
-}
