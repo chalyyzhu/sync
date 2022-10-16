@@ -37,6 +37,7 @@ user_data(){
     echo "• PRIVATE KEY : $private_key"
     echo "• MODE         : $mode"
     echo "• BUG         : $bug"
+    echo "• PROXY         : $proxy"
     echo
     echo "================================"
     echo
