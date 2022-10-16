@@ -22,7 +22,10 @@ time_loop = main_config["time_loop"]
 mode_ = main_config["mode_"] # untuk mode bisa di rubah ke ssl atau proxy
 #######################
 #config untuk mode proxy
-proxy = open("proxy", "r").read()
+try:
+    proxy = open("proxy", "r").read()
+Except:
+    proxy = ""
 sni = bugs[0]
 #######################
 #config server DB
