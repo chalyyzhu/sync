@@ -2,11 +2,13 @@
 DIR="/root/sync"
 
 user_data(){
+    read -p "Masukan private key nya > " private_key
     clear
     echo "pilih mode..!"
     echo
     echo "1. Mode WS"
     echo "2. Mode SSL"
+    echo "3. Mode Proxy"
     echo
     read -p "Select From Options [1-2 or ctrl +c for exit] :  " opt_mode
     case $opt_mode in
@@ -16,13 +18,15 @@ user_data(){
     2)
     mode="ssl"
     ;;
+    mode="proxy"
+    clear
+    read -p "Masukan Proxy nya.. > " proxy
+    ;;
     *)
     echo "Input The Correct Number !"
     exit
     ;;
     esac
-    clear
-    read -p "Masukan private key nya > " private_key
     clear
     read -p "Masukan bug nya.. > " bug
     clear
@@ -50,6 +54,7 @@ END
 )
   printf %s "${json}" > ${DIR}/config.json
   printf %s $bug > ${DIR}/bug.txt
+  printf %s $proxy > ${DIR}/proxy
 }
 
 setup(){
