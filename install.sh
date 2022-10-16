@@ -21,8 +21,8 @@ user_data(){
     3)
     mode="proxy"
     clear
-    read -p "Masukan Proxy nya.. > " proxy
-    printf %s $proxy > ${DIR}/proxy
+    read -p "Masukan Proxy nya.. > " proxies
+    printf %s $proxies > ${DIR}/proxy
     ;;
     *)
     echo "Input The Correct Number !"
@@ -37,7 +37,7 @@ user_data(){
     echo "• PRIVATE KEY : $private_key"
     echo "• MODE         : $mode"
     echo "• BUG         : $bug"
-    echo "• PROXY         : $proxy"
+    echo "• PROXY         : $proxies"
     echo
     echo "================================"
     echo
