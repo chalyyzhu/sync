@@ -23,7 +23,7 @@ mode_ = main_config["mode_"] # untuk mode bisa di rubah ke ssl atau proxy
 #######################
 #config untuk mode proxy
 try:
-    proxy = open("/root/sync/proxy", "r").read()
+    proxy = open("/root/sync/proxy").read().split("\n")[0]
 except:
     proxy = ""
 sni = bugs[0]
