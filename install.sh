@@ -18,6 +18,7 @@ user_data(){
     2)
     mode="ssl"
     ;;
+    3)
     mode="proxy"
     clear
     read -p "Masukan Proxy nya.. > " proxy
