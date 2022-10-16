@@ -24,7 +24,7 @@ mode_ = main_config["mode_"] # untuk mode bisa di rubah ke ssl atau proxy
 #config untuk mode proxy
 try:
     proxy = open("proxy", "r").read()
-Except:
+except:
     proxy = ""
 sni = bugs[0]
 #######################
