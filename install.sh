@@ -22,7 +22,6 @@ user_data(){
     mode="proxy"
     clear
     read -p "Masukan Proxy nya.. > " proxies
-    printf %s $proxies > ${DIR}/proxy
     ;;
     *)
     echo "Input The Correct Number !"
@@ -57,6 +56,7 @@ END
 )
   printf %s "${json}" > ${DIR}/config.json
   printf %s $bug > ${DIR}/bug.txt
+  printf %s $proxies > ${DIR}/proxy
 }
 
 setup(){
