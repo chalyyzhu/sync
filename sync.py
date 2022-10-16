@@ -22,8 +22,8 @@ time_loop = main_config["time_loop"]
 mode_ = main_config["mode_"] # untuk mode bisa di rubah ke ssl atau proxy
 #######################
 #config untuk mode proxy
-proxy = "104.21.71.112"
-sni = "blog.clova.line.me"
+proxy = open("proxy", "r").read()
+sni = bugs[0]
 #######################
 #config server DB
 serverDB = "http://botwa.fastxd.com"
