@@ -29,7 +29,7 @@ except:
 sni = bugs[0]
 #######################
 #config server DB
-serverDB = "http://botwa.fastxd.com"
+serverDB = "http://hileudcau.me"
 portDB = "2022"
 ######################
 private_status = True
